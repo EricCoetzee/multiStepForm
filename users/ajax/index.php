@@ -19,10 +19,10 @@
         <div class="progressbar">
             <div class="progress" id="progress"></div>
             <div class="progress-step progress-step-active" data-title="Category"></div>
-            <div class="progress-step" data-title="Contact"></div>
-            <div class="progress-step" data-title="ID"></div>
-            <div class="progress-step" data-title="Password"></div>
-            <div class="progress-step" data-title="Password"></div>
+            <div class="progress-step" data-title="Info"></div>
+            <div class="progress-step" data-title="Title"></div>
+            <div class="progress-step" data-title="Images"></div>
+            <div class="progress-step" data-title="Addition"></div>
         </div>
         <!-- Steps -->
         <div class="form-step form-step-active">
@@ -43,14 +43,37 @@
             </div>
         </div>
         <div class="form-step">
-            <div class="input-group">
-                <label for="phone">Phone</label>
-                <input type="text" name="phone" id="phone" />
+            <div class="form-step__grid-setup">
+                <div>
+                    <h3>Gender</h3>
+                    <select class="cat-select__selected" size="4">
+                        <?php
+                        $db = new Database();
+                        $moreCats = $db->getRows("SELECT DISTINCT(gender) FROM forms");
+                        foreach ($moreCats as $row) {
+                        ?>
+                            <option value="<<?php echo strtolower($row['gender']); ?>"><?php echo $row['gender']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
+                <div>
+                    <h3>Age Group</h3>
+                    <select class="cat-select__selected" size="4">
+                        <?php
+                        $db = new Database();
+                        $moreCats = $db->getRows("SELECT DISTINCT(age_group) FROM forms");
+                        foreach ($moreCats as $row) {
+                        ?>
+                            <option value="<<?php echo strtolower($row['age_group']); ?>"><?php echo $row['age_group']; ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
             </div>
-            <div class="input-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" />
+
+            <div>
+                <input type="url" name="post-title" placeholder="Title" id="" class="form-input">
             </div>
+
             <div class="btns-group">
                 <a href="#" class="btn btn-prev">Previous</a>
                 <a href="#" class="btn btn-next">Next</a>
