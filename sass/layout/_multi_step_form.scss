@@ -49,7 +49,7 @@ input {
 
     justify-content: space-between;
     counter-reset: step;
-    margin: 2rem 0 4rem;
+    margin: 2rem 0 2rem;
 }
 .progressbar::before,
 .progress {
@@ -109,10 +109,15 @@ input {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-gap: 10px;
-        h3{
+        h3 {
             margin: 0;
             padding: 0;
         }
+    }
+    &__img-upload-section {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 5px;
     }
 }
 .form-step-active {
@@ -120,6 +125,11 @@ input {
 }
 .input-group {
     margin: 2rem 0;
+    &__post-description {
+        margin: 0px;
+        width: 100%;
+        height: 106px;
+    }
 }
 @keyframes animate {
     from {

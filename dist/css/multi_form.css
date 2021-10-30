@@ -59,6 +59,47 @@
         background-image: linear-gradient(to left bottom, var(--color-main), var(--color-main-2));
         color: var(--color-light-1); }
 
+.center {
+  display: inline; }
+
+.form-input input {
+  display: none; }
+
+.form-input label {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 114px;
+  max-height: 121px;
+  background: #333;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.form-input img {
+  content: 'Add Image';
+  width: 100%;
+  height: 120px;
+  opacity: 0.4;
+  color: var(--color-light-1); }
+
+.imgRemove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  border: none;
+  font-size: 29px;
+  outline: none;
+  opacity: 0.5; }
+
+.imgRemove::after {
+  content: " \21BA";
+  color: var(--color-danger);
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 1; }
+
 :root {
   --primary-color: rgb(11, 78, 179); }
 
@@ -109,7 +150,7 @@ input {
   display: flex;
   justify-content: space-between;
   counter-reset: step;
-  margin: 2rem 0 4rem; }
+  margin: 2rem 0 2rem; }
 
 .progressbar::before,
 .progress {
@@ -172,12 +213,20 @@ input {
     .form-step__grid-setup h3 {
       margin: 0;
       padding: 0; }
+  .form-step__img-upload-section {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 5px; }
 
 .form-step-active {
   display: block; }
 
 .input-group {
   margin: 2rem 0; }
+  .input-group__post-description {
+    margin: 0px;
+    width: 100%;
+    height: 106px; }
 
 @keyframes animate {
   from {
