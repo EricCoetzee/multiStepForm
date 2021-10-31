@@ -1,6 +1,7 @@
 <?php include_once('../../includes/db/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,6 +11,7 @@
     <script src="../../dist/scripts/customSelect.js" defer></script>
     <title>Registraion Form</title>
 </head>
+
 <body>
     <form action="#" class="form">
         <h1 class="text-center">Create Post</h1>
@@ -99,28 +101,29 @@
                         <div class="center">
                             <div class="form-input">
                                 <label for="file-ip-<?php echo $x; ?>">
-                                    <img id="file-ip-<?php echo $x; ?>-preview" alt="__Add Image" src="../../img/image.png">
-                                    <button type="button" class="imgRemove" onclick="myImgRemove(<?php echo $x; ?>)"></button>
+                                    <img id="file-ip-<?php echo $x; ?>-preview" alt="__Add Image">
+                                    <button type="button" class="imgRemove" title='removes image' onclick="myImgRemove(<?php echo $x; ?>)"></button>
                                 </label>
-                                <input type="file" name="img<?php echo $x; ?>"  id="file-ip-<?php echo $x; ?>" accept="image/*" onchange="showPreview(event, <?php echo $x; ?>);">
+                                <input type="file" name="img<?php echo $x; ?>" id="file-ip-<?php echo $x; ?>" accept="image/*" onchange="showPreview(event, <?php echo $x; ?>);">
                             </div>
                         </div>
                     </div>
                     <script>
-                        var number = <?php echo $x;?>;
-                        console.log(<?php echo $x;?>)
-                            function showPreview(event, number) {
-                                if (event.target.files.length > 0) {
-                                    let src = URL.createObjectURL(event.target.files[0]);
-                                    let preview = document.getElementById("file-ip-" + number + "-preview");
-                                    preview.src = src;
-                                    preview.style.display = "block";
-                                }
+                        var number = <?php echo $x; ?>;
+
+                        function showPreview(event, number) {
+                            if (event.target.files.length > 0) {
+                                let src = URL.createObjectURL(event.target.files[0]);
+                                let preview = document.getElementById("file-ip-" + number + "-preview");
+                                preview.src = src;
+                                preview.style.display = "block";
                             }
-                            function myImgRemove(number) {
-                                document.getElementById("file-ip-" + number + "-preview").src = "../../img/image.png";
-                                document.getElementById("file-ip-" + number).value = null;
-                            }
+                        }
+
+                        function myImgRemove(number) {
+                            document.getElementById("file-ip-" + number + "-preview").src = "../../img/image.png";
+                            document.getElementById("file-ip-" + number).value = null;
+                        }
                     </script>
                 <?php } ?>
             </div>
@@ -131,18 +134,31 @@
         </div>
         <div class="form-step">
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" />
+                <div class="user-info">
+                    <label for="user-info">Display User Info
+                        <input type="checkbox" name="user-info" id="user-info" value="yes">
+                    </label>
+                    <label for="user-comments">Allow Social
+                        <input type="checkbox" name="user-comments" id="user-comments" value="yes">
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="additional-links">Website</label>
+                    <input type="text" name="additional-links" id="additional-links" />
+                </div>
             </div>
             <div class="input-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" />
+                <div class="center">
+                    <!-- <input type="checkbox" name=""> Show User Info -->
+                </div>
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <input type="submit" value="Submit" class="btn" />
+                <div><a href="#" class="btn btn-prev">Previous</a></div>
+                
+               <div><input type="submit" value="Submit" class="btn" /></div> 
             </div>
         </div>
     </form>
 </body>
+
 </html>

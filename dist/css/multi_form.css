@@ -16,6 +16,42 @@
   --gradient-color-4: linear-gradient(to right bottom, var(--color-main), var(--color-main-2)) ;
   --gradient-color-5: linear-gradient(to left bottom, var(--color-main), var(--color-main-2)) ; }
 
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 10px; }
+
+input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 50px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s; }
+
+input:checked[type="checkbox"] {
+  background: #6699ff; }
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-image: linear-gradient(to right bottom, var(--color-main), var(--color-main-2)), url(../../img/svg/spinner6.svg);
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s; }
+
+input:checked[type="checkbox"]:before {
+  left: 40px; }
+
 .cat-select {
   width: 100%;
   margin: 5px;
@@ -71,26 +107,28 @@
   width: 100%;
   height: 114px;
   max-height: 121px;
-  background: #333;
+  background-size: 100%;
+  background-image: url("../../img/image.png");
   border-radius: 10px;
   cursor: pointer; }
 
 .form-input img {
-  content: 'Add Image';
   width: 100%;
   height: 120px;
-  opacity: 0.4;
+  font-size: 12px;
+  background-color: var(--color-dark-1);
   color: var(--color-light-1); }
 
 .imgRemove {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: white;
+  border-top-right-radius: 20px;
+  background-image: linear-gradient(to right bottom, var(--color-main), var(--color-main-2));
   border: none;
   font-size: 29px;
-  outline: none;
-  opacity: 0.5; }
+  color: var(--color-light-1);
+  outline: none; }
 
 .imgRemove::after {
   content: " \21BA";
@@ -190,7 +228,7 @@ input {
   color: #666; }
 
 .progress-step-active {
-  background-image: linear-gradient(to right bottom, var(--color-main), var(--color-main-2));
+  background-image: linear-gradient(to right bottom, var(--color-main), var(--color-main-2)), url(../../img/svg/spinner6.svg);
   color: #f3f3f3;
   font-size: 200%; }
 
@@ -216,6 +254,8 @@ input {
   .form-step__img-upload-section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    height: 100%;
     grid-gap: 5px; }
 
 .form-step-active {
@@ -240,6 +280,7 @@ input {
 .btns-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   gap: 1.5rem; }
 
 .btn {
@@ -254,6 +295,7 @@ input {
   transition: 0.3s; }
   .btn:active {
     background-image: linear-gradient(to left bottom, var(--color-main), var(--color-main-2)); }
-
-.btn:hover {
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-main); }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-main); }
+  .btn:last-child {
+    max-height: 200px; }
