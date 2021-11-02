@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     counter-reset: step;
-    margin: 2rem 0 2rem;
+    margin: 2rem 0 3rem;
     &::before,
     &__progress {
         content: "";
@@ -24,8 +24,8 @@
         transition: 0.3s;
     }
     &__progress-step {
-        width: 2.1875rem;
-        height: 2.1875rem;
+        width: 3.2rem;
+        height: 3.2rem;
         background-color: #dcdcdc;
         border-radius: 50%;
         display: flex;
@@ -39,7 +39,7 @@
             content: attr(data-title);
             position: absolute;
             top: calc(100% + 0.5rem);
-            font-size: 0.85rem;
+            font-size: 1.2rem;
             color: #666;
         }
     }

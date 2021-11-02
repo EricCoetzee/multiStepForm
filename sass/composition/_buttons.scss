@@ -5,6 +5,7 @@
     align-items: center;
     gap: 1.5rem;
     &__btn {
+        @include para;
         padding: 0.75rem;
         display: block;
         text-decoration: none;
@@ -21,7 +22,7 @@
             box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-main);
         }
         &:last-child {
-            max-height: 200px;
+            max-height: 25.0rem;
         }
         &--one {
             width: 50%;

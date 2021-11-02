@@ -3,6 +3,11 @@
 *::after {
     box-sizing: border-box;
 }
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
 body {
     font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;

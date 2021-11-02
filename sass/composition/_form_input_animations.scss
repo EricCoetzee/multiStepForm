@@ -1,0 +1,48 @@
+form{
+    &__group:not(:last-child){
+        margin-bottom: 1rem;
+    }
+    &__input{
+       @include para;
+       padding: 1rem 2rem;
+       font-family: inherit;
+       color: inherit;
+       border-radius: 2px;
+       background-color: rgba(0,0,0,.2);
+       border: none;
+       border-bottom: 3px solid transparent ;
+       width: 40%;
+       display: block;
+       transition: all .3s;
+       @include respons(tab-port){
+           width: 60%;  
+       }
+       @include respons(small){
+           width: 100%;  
+       }
+       &:focus{
+           outline: none;
+           box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+           border-bottom: 3px solid var(--color-main) ;
+           &:valid{
+               border-bottom: 3px solid var(--success-color) ;
+           }
+       }
+       &::-webkit-input-placeholder{
+           color: rgb(85, 83, 83);
+      }
+    }
+    &__label{
+       font-size: 1.2rem;
+       margin-left: 2rem;
+       font-weight: 700;
+       margin-top: .7rem;
+       display: block;
+       transition: all .5s;
+    }
+    &__input:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

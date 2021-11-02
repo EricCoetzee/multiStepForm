@@ -1,7 +1,6 @@
 <?php include_once('../../includes/db/init.php') ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,10 +10,9 @@
     <script src="../../dist/scripts/customSelect.js" defer></script>
     <title>Registraion Form</title>
 </head>
-
 <body>
     <form action="#" class="post-form">
-        <h1 class="post-form--heading">Create Post</h1>
+        <h1 class="heading-secondary heading-secondary--center-auto">Create Post</h1>
         <!-- Progress bar -->
         <div class="progressbar">
             <div class="progressbar__progress" id="progress"></div>
@@ -27,7 +25,7 @@
         <!-- Steps -->
         <div class="form-step form-step-active">
             <div>
-                <label class="post-form__label" for="select_category" class="post-form__label">Scroll for more categories</label>
+                <label class="post-form__label-heading" for="select_category" class="post-form__label">Scroll for more categories</label>
                 <select class="cat-select__selected" id="select_category" name="select_category" size="5">
                     <?php
                     $db = new Database();
@@ -69,8 +67,9 @@
                     </select>
                 </div>
             </div>
-            <div>
-                <input type="url" name="post-title" placeholder="Youtube URL" id="" class="form-input">
+            <div class="form-group">
+                <input type="url" name="post-title" placeholder="Youtube URL" id="y-url" class="form__input">
+                <label for="y-url" class="form__label">Youtube URL</label>
             </div>
             <div class="btns-group">
                 <a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a>
@@ -99,7 +98,7 @@
                 ?>
                     <div class="image-upload-<?php echo $x; ?>">
                         <div class="center">
-                            <div class="form-input">
+                            <div class="form__input">
                                 <label class="post-form__label" for="file-ip-<?php echo $x; ?>">
                                     <img id="file-ip-<?php echo $x; ?>-preview" alt="__Add Image">
                                     <button type="button" class="imgRemove" title='removes image' onclick="myImgRemove(<?php echo $x; ?>)"></button>
@@ -110,7 +109,6 @@
                     </div>
                     <script>
                         var number = <?php echo $x; ?>;
-
                         function showPreview(event, number) {
                             if (event.target.files.length > 0) {
                                 let src = URL.createObjectURL(event.target.files[0]);
@@ -119,7 +117,6 @@
                                 preview.style.display = "block";
                             }
                         }
-
                         function myImgRemove(number) {
                             document.getElementById("file-ip-" + number + "-preview").src = "../../img/image.png";
                             document.getElementById("file-ip-" + number).value = null;
@@ -154,11 +151,9 @@
             </div>
             <div class="btns-group">
                 <div><a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a></div>
-                
-               <div><input type="submit" value="Submit" class="btn" /></div> 
+               <div><input type="submit" value="Submit" class="btns-group__btn" /></div> 
             </div>
         </div>
     </form>
 </body>
-
 </html>

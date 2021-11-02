@@ -1,0 +1,38 @@
+.heading-secondary{
+    text-transform: uppercase;
+    font-weight: 600;
+    background-image: linear-gradient(to right, var(--color-main), var(--color-main-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+    @include heading2;
+    padding: 1rem;
+    &--center-auto{
+        text-align: center;
+        margin: auto;
+    }
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(#000, .20);
+    }
+ }
+%heading{
+    /* font-family: var(--my-font-1); */
+    font-weight: 600;
+}
+.heading-2{
+    @extend %heading;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--color-main);
+    &--light{color:var(--text-color);}
+    &--dark{color:var(--text-color-dark);}
+}    
+.heading-3{
+    @extend %heading;
+    @include para;
+    &--light{color:var(--text-color);}
+    &--dark{color:var(--text-color-dark);}
+}  
