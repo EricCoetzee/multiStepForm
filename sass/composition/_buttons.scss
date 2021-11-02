@@ -1,1 +1,31 @@
- 
+/* Gradiant Button */
+.btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    &__btn {
+        padding: 0.75rem;
+        display: block;
+        text-decoration: none;
+        background-image: linear-gradient(to right bottom, var(--color-main), var(--color-main-2));
+        color: #f3f3f3;
+        text-align: center;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        transition: 0.3s;
+        &:active {
+            background-image: linear-gradient(to left bottom, var(--color-main), var(--color-main-2));
+        }
+        &:hover {
+            box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--color-main);
+        }
+        &:last-child {
+            max-height: 200px;
+        }
+        &--one {
+            width: 50%;
+            margin-left: auto;
+        }
+    }
+}

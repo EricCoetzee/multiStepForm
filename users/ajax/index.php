@@ -13,22 +13,22 @@
 </head>
 
 <body>
-    <form action="#" class="form">
-        <h1 class="text-center">Create Post</h1>
+    <form action="#" class="post-form">
+        <h1 class="post-form--heading">Create Post</h1>
         <!-- Progress bar -->
         <div class="progressbar">
-            <div class="progress" id="progress"></div>
-            <div class="progress-step progress-step-active" data-title="Category"></div>
-            <div class="progress-step" data-title="Info"></div>
-            <div class="progress-step" data-title="Title"></div>
-            <div class="progress-step" data-title="Images"></div>
-            <div class="progress-step" data-title="Addition"></div>
+            <div class="progressbar__progress" id="progress"></div>
+            <div class="progressbar__progress-step progressbar__progress-step-active" data-title="Category"></div>
+            <div class="progressbar__progress-step" data-title="Info"></div>
+            <div class="progressbar__progress-step" data-title="Title"></div>
+            <div class="progressbar__progress-step" data-title="Images"></div>
+            <div class="progressbar__progress-step" data-title="Addition"></div>
         </div>
         <!-- Steps -->
         <div class="form-step form-step-active">
-            <div class="category-container">
-                <label>Scroll for more categories</label>
-                <select class="cat-select__selected" size="5">
+            <div>
+                <label class="post-form__label" for="select_category" class="post-form__label">Scroll for more categories</label>
+                <select class="cat-select__selected" id="select_category" name="select_category" size="5">
                     <?php
                     $db = new Database();
                     $moreCats = $db->getRows("SELECT DISTINCT(cat) FROM cats ORDER BY cat ");
@@ -39,13 +39,13 @@
                 </select>
             </div>
             <div class="">
-                <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                <a href="#" class="btns-group__btn btns-group__btn-next btns-group__btn--one">Next</a>
             </div>
         </div>
         <div class="form-step">
             <div class="form-step__grid-setup">
                 <div>
-                    <label for="email">Gender</label>
+                    <label class="post-form__label" for="email">Gender</label>
                     <select class="cat-select__selected" size="4">
                         <?php
                         $db = new Database();
@@ -57,7 +57,7 @@
                     </select>
                 </div>
                 <div>
-                    <label for="email">Age Group</label>
+                    <label class="post-form__label" for="email">Age Group</label>
                     <select class="cat-select__selected" size="4">
                         <?php
                         $db = new Database();
@@ -73,22 +73,22 @@
                 <input type="url" name="post-title" placeholder="Youtube URL" id="" class="form-input">
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+                <a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a>
+                <a href="#" class="btns-group__btn btns-group__btn-next">Next</a>
             </div>
         </div>
         <div class="form-step">
             <div class="input-group">
-                <label for="title">Title</label>
+                <label class="post-form__label" for="title">Title</label>
                 <input type="text" name="title" id="title" />
             </div>
             <div class="input-group">
-                <label for="description">Description</label>
+                <label class="post-form__label" for="description">Description</label>
                 <textarea type="text" name="description" id="description" class="input-group__post-description" placeholder="description"></textarea>
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+                <a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a>
+                <a href="#" class="btns-group__btn btns-group__btn-next">Next</a>
             </div>
         </div>
         <div class="form-step">
@@ -100,7 +100,7 @@
                     <div class="image-upload-<?php echo $x; ?>">
                         <div class="center">
                             <div class="form-input">
-                                <label for="file-ip-<?php echo $x; ?>">
+                                <label class="post-form__label" for="file-ip-<?php echo $x; ?>">
                                     <img id="file-ip-<?php echo $x; ?>-preview" alt="__Add Image">
                                     <button type="button" class="imgRemove" title='removes image' onclick="myImgRemove(<?php echo $x; ?>)"></button>
                                 </label>
@@ -128,22 +128,22 @@
                 <?php } ?>
             </div>
             <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+                <a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a>
+                <a href="#" class="btns-group__btn btns-group__btn-next">Next</a>
             </div>
         </div>
         <div class="form-step">
             <div class="input-group">
                 <div class="user-info">
-                    <label for="user-info">Display User Info
+                    <label class="post-form__label" for="user-info">Display User Info
                         <input type="checkbox" name="user-info" id="user-info" value="yes">
                     </label>
-                    <label for="user-comments">Allow Social
+                    <label class="post-form__label" for="user-comments">Allow Social
                         <input type="checkbox" name="user-comments" id="user-comments" value="yes">
                     </label>
                 </div>
                 <div class="input-group">
-                    <label for="additional-links">Website</label>
+                    <label class="post-form__label" for="additional-links">Website</label>
                     <input type="text" name="additional-links" id="additional-links" />
                 </div>
             </div>
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="btns-group">
-                <div><a href="#" class="btn btn-prev">Previous</a></div>
+                <div><a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a></div>
                 
                <div><input type="submit" value="Submit" class="btn" /></div> 
             </div>

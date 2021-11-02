@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import './abstracts/animations';
 @import './abstracts/mixin';
 @import './abstracts/variables';
 
@@ -9,6 +10,7 @@
 @import './composition/checkbox_toggle';
 @import './composition/custom_select';
 @import './composition/form';
+@import './composition/progress_bar';
 @import './composition/image_upload';
 
 @import './layout/multi_step_form'; 

@@ -1,19 +1,27 @@
 {
   "name": "multistepform",
   "version": "1.0.0",
-  "description": "multistep form for apps",
-  "main": "index.php",
-  "scripts": {
-    "watch:sass": "node-sass sass/multi_form.scss dist/css/multi_form.css -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "forms",
-    "etc"
-  ],
-  "author": "Eric Coetzee",
-  "license": "MIT",
+  "description": "",
+  "main": "index.js",
   "dependencies": {
     "node-sass": "^6.0.1"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/multi_form.scss dist/css/multi_form.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricCoetzee/multiStepForm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricCoetzee/multiStepForm/issues"
+  },
+  "homepage": "https://github.com/EricCoetzee/multiStepForm#readme"
 }
+
+
+  
