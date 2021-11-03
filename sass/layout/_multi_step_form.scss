@@ -40,10 +40,6 @@ input {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         grid-gap: 1.4rem;
-        h3 {
-            margin: 0;
-            padding: 0;
-        }
     }
     &__img-upload-section {
         display: grid;

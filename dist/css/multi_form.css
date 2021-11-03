@@ -406,14 +406,13 @@ input:checked[type="checkbox"]:before {
   font-size: 2.9rem;
   color: var(--color-light-1);
   outline: none; }
-
-.imgRemove::after {
-  content: " \21BA";
-  color: var(--color-danger);
-  font-weight: 900;
-  border-radius: 8px;
-  cursor: pointer;
-  opacity: 1; }
+  .imgRemove::after {
+    content: " \21BA";
+    color: var(--color-danger);
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 1; }
 
 /* Global Stylings */
 input {
@@ -452,9 +451,6 @@ input {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 1.4rem; }
-    .form-step__grid-setup h3 {
-      margin: 0;
-      padding: 0; }
   .form-step__img-upload-section {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
