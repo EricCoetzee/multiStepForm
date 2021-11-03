@@ -43,8 +43,8 @@
         <div class="form-step">
             <div class="form-step__grid-setup">
                 <div>
-                    <label class="post-form__label" for="email">Gender</label>
-                    <select class="cat-select__selected" size="4">
+                    <label class="post-form__label-heading" for="email">Gender</label>
+                    <select class="cat-select__selected--no-bar" size="4">
                         <?php
                         $db = new Database();
                         $moreCats = $db->getRows("SELECT DISTINCT(gender) FROM forms");
@@ -55,8 +55,8 @@
                     </select>
                 </div>
                 <div>
-                    <label class="post-form__label" for="email">Age Group</label>
-                    <select class="cat-select__selected" size="4">
+                    <label class="post-form__label-heading" for="email">Age Group</label>
+                    <select class="cat-select__selected--no-bar" size="4">
                         <?php
                         $db = new Database();
                         $moreCats = $db->getRows("SELECT DISTINCT(age_group) FROM forms");
@@ -67,7 +67,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form__group">
                 <input type="url" name="post-title" placeholder="Youtube URL" id="y-url" class="form__input">
                 <label for="y-url" class="form__label">Youtube URL</label>
             </div>
@@ -77,13 +77,13 @@
             </div>
         </div>
         <div class="form-step">
-            <div class="input-group">
-                <label class="post-form__label" for="title">Title</label>
-                <input type="text" name="title" id="title" />
+            <div class="form__group">
+                <input type="text" class="form__input" placeholder="Title" name="title" id="title" />
+                <label class="form__label" for="title">Title</label>
             </div>
-            <div class="input-group">
-                <label class="post-form__label" for="description">Description</label>
-                <textarea type="text" name="description" id="description" class="input-group__post-description" placeholder="description"></textarea>
+            <div class="form__group">
+                <textarea type="text" name="description" id="description" class="input-group__post-description form__input" placeholder="Description"></textarea>
+                <label class="form__label" for="description">Description</label>
             </div>
             <div class="btns-group">
                 <a href="#" class="btns-group__btn btns-group__btn-prev">Previous</a>
@@ -98,7 +98,7 @@
                 ?>
                     <div class="image-upload-<?php echo $x; ?>">
                         <div class="center">
-                            <div class="form__input">
+                            <div class="form-input">
                                 <label class="post-form__label" for="file-ip-<?php echo $x; ?>">
                                     <img id="file-ip-<?php echo $x; ?>-preview" alt="__Add Image">
                                     <button type="button" class="imgRemove" title='removes image' onclick="myImgRemove(<?php echo $x; ?>)"></button>
@@ -139,9 +139,9 @@
                         <input type="checkbox" name="user-comments" id="user-comments" value="yes">
                     </label>
                 </div>
-                <div class="input-group">
-                    <label class="post-form__label" for="additional-links">Website</label>
-                    <input type="text" name="additional-links" id="additional-links" />
+                <div class="form__group">
+                    <input type="url" name="additional-links" class="form__input" placeholder="Website" id="additional-links" />
+                    <label class="form__label" for="additional-links">Website</label>
                 </div>
             </div>
             <div class="input-group">

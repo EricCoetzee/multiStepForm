@@ -1,31 +1,27 @@
-form{
-    &__group:not(:last-child){
+.form{
+    &__group{
+        position: relative;
         margin-bottom: 1rem;
     }
     &__input{
        @include para;
-       padding: 1rem 2rem;
+       padding: 1rem 0 0 1.5rem;
        font-family: inherit;
        color: inherit;
+       height: 5rem;
        border-radius: 2px;
        background-color: rgba(0,0,0,.2);
        border: none;
        border-bottom: 3px solid transparent ;
-       width: 40%;
+       width: 100%;
        display: block;
        transition: all .3s;
-       @include respons(tab-port){
-           width: 60%;  
-       }
-       @include respons(small){
-           width: 100%;  
-       }
        &:focus{
            outline: none;
            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
-           border-bottom: 3px solid var(--color-main) ;
+           border-bottom: 3px solid var(--color-danger) ;
            &:valid{
-               border-bottom: 3px solid var(--success-color) ;
+               border-bottom: 3px solid var(--color-success) ;
            }
        }
        &::-webkit-input-placeholder{
@@ -33,8 +29,11 @@ form{
       }
     }
     &__label{
+        position: absolute;
+        top: -6px;
+        left: 0;
        font-size: 1.2rem;
-       margin-left: 2rem;
+       margin-left: 1rem;
        font-weight: 700;
        margin-top: .7rem;
        display: block;
@@ -43,6 +42,6 @@ form{
     &__input:placeholder-shown + &__label{
         opacity: 0;
         visibility: hidden;
-        transform: translateY(-4rem);
+        transform: translateY(1rem);
     }
 }
