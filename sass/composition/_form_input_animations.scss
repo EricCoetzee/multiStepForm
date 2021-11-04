@@ -10,7 +10,7 @@
        color: inherit;
        height: 5rem;
        border-radius: 2px;
-       background-color: rgba(0,0,0,.2);
+       background-color: rgba(0,0,0,.07);
        border: none;
        border-bottom: 3px solid transparent ;
        width: 100%;
@@ -25,16 +25,17 @@
            }
        }
        &::-webkit-input-placeholder{
-           color: rgb(85, 83, 83);
+           color: #555353;
       }
     }
     &__label{
         position: absolute;
         top: -6px;
         left: 0;
+        color: #555353;
        font-size: 1.2rem;
        margin-left: 1rem;
-       font-weight: 700;
+       font-weight: 400;
        margin-top: .7rem;
        display: block;
        transition: all .5s;

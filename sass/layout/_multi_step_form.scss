@@ -20,6 +20,7 @@ input {
 /* Form */
 .post-form {
     &__label-heading {
+        color: #555353;
         display: block;
         margin-bottom: 0.5rem;
         @include para;
@@ -47,7 +48,7 @@ input {
         margin: 1rem 0;
         width: 100%;
         height: 100%;
-        grid-gap: 5px;
+        grid-gap: 2rem;
     }
 }
 .form-step-active {

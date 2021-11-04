@@ -24,7 +24,7 @@
         // border color 
         --border-color: var(--color-dark-3);
     
-        //danger color
+        //progress colors
         --color-danger: #F32013;
         --color-success: #8de02c ;
         --color-pending: #f3ca3f;
@@ -32,7 +32,6 @@
     
         // Social Media Colors
     
-        
          
     
         // Gradiaint color for background
@@ -55,6 +54,7 @@
         --heading-font-color: #222;
         --subheading-font-color: #2f4f4f;
         --body-text-color: #5b6770;
+    
     
         //typography/fonts size
         //heading size
@@ -96,12 +96,10 @@
     
         //  Borders
          --line: 1px solid var(--border-color:);
-           // color coordinates for processing status
+          
+        //  forms
 
-        --status-delivered: #8de02c;
-        --status-pending: #f3ca3f;
-        --status-returned: #f00;
-        --status-inprocess: #1795ce ;
+        --form-text-color: #555353;
       
     }
 

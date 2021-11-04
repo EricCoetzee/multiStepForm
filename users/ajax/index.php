@@ -91,7 +91,7 @@
             </div>
         </div>
         <div class="form-step">
-            <label>Add Images</label>
+            <label class="post-form__label-heading">Add Images</label>
             <div class="form-step__img-upload-section">
                 <?php
                 for ($x = 0; $x <= 3; $x++) {
@@ -132,10 +132,10 @@
         <div class="form-step">
             <div class="input-group">
                 <div class="user-info">
-                    <label class="post-form__label" for="user-info">Display User Info
+                    <label class="post-form__label-heading" for="user-info">Display User Info
                         <input type="checkbox" name="user-info" id="user-info" value="yes">
                     </label>
-                    <label class="post-form__label" for="user-comments">Allow Social
+                    <label class="post-form__label-heading" for="user-comments">Allow Social
                         <input type="checkbox" name="user-comments" id="user-comments" value="yes">
                     </label>
                 </div>
