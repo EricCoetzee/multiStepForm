@@ -37,7 +37,7 @@
                 </select>
             </div>
             <div class="">
-                <a href="#" class="btns-group__btn btns-group__btn-next btns-group__btn--one">Next</a>
+                <a href="javascript:void(0)" class="btns-group__btn btns-group__btn-next btns-group__btn--one">Next</a>
             </div>
         </div>
         <div class="form-step">
