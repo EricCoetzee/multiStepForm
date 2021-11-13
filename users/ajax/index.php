@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../dist/css/multi_form.css" />
-    <script src="../../dist/scripts/mulForm.js" defer></script>
-    <script src="../../dist/scripts/customSelect.js" defer></script>
+    
     <title>Registraion Form</title>
 </head>
 <body>
